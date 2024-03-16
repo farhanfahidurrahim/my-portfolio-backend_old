@@ -20,7 +20,9 @@
     <link rel="stylesheet"
         href="{{ asset('backend') }}/assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/vendor/morrisjs/morris.min.css" />
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/vendor/jquery-datatable/dataTables.bootstrap4.min.css">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main.css">
@@ -65,13 +67,19 @@
     <!-- Javascript -->
     <script src="{{ asset('backend') }}/assets/bundles/libscripts.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/vendorscripts.bundle.js"></script>
+    <script src="{{ asset('backend') }}/assets/bundles/datatablescripts.bundle.js"></script>
 
-    <script src="{{ asset('backend') }}/assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+    <script src="{{ asset('backend') }}/assets/bundles/jvectormap.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/morrisscripts.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/knob.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/mainscripts.bundle.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/pages/tables/jquery-datatable.js"></script>
     <script src="{{ asset('backend') }}/assets/js/pages/ui/sortable-nestable.js"></script>
     <script src="{{ asset('backend') }}/assets/js/index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    {!! Toastr::message() !!}
+
 </body>
 
 </html>

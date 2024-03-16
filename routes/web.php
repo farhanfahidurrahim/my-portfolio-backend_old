@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\HomeSectionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 /* ======================================================================== */
@@ -31,6 +32,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    /*
+    * Home Section Routes...
+    */
+    Route::resource('home-section', HomeSectionController::class);
 });
 
 require __DIR__ . '/auth.php';

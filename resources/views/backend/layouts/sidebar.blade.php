@@ -49,15 +49,15 @@
                     <ul class="main-menu metismenu">
                         <li class="active"><a href="index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
                         <li><span>-- Menu</span></li>
-                        <li><a href="javascript:void(0);" class="has-arrow"><i
-                                    class="icon-control-pause"></i><span>Departments</span> </a>
+                        <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Home
+                                    Section</span> </a>
                             <ul>
-                                <li><a href="departments.html">All Departments</a></li>
-                                <li><a href="add-departments.html">Add Departments</a></li>
+                                <li><a href="{{ route('home-section.index') }}">All</a></li>
+                                <li><a href="{{ route('home-section.create') }}">Add</a></li>
                             </ul>
                         </li>
                         <li><a href="javascript:void(0);" class="has-arrow"><i
-                                    class="icon-graduation"></i><span>Courses</span> </a>
+                                    class="icon-graduation"></i><span>About</span> </a>
                             <ul>
                                 <li><a href="courses.html">All Courses</a></li>
                                 <li><a href="add-courses.html">Add Courses</a></li>
@@ -65,21 +65,30 @@
                             </ul>
                         </li>
                         <li><a href="javascript:void(0);" class="has-arrow"><i
-                                    class="icon-notebook"></i><span>Library</span> </a>
+                                    class="icon-notebook"></i><span>Resume</span> </a>
                             <ul>
                                 <li><a href="add-library.html">Add Library</a></li>
                                 <li><a href="library.html">List Library</a></li>
                             </ul>
                         </li>
                         <li><a href="javascript:void(0);" class="has-arrow"><i
-                                    class="icon-share fa-rotate-90 d-inline-block"></i><span>Class</span> </a>
+                                    class="icon-share fa-rotate-90 d-inline-block"></i><span>Portfolio</span> </a>
                             <ul>
                                 <li><a href="add-classroom.html">Add Class</a></li>
                                 <li><a href="classroom.html">List Class</a></li>
                             </ul>
                         </li>
+                        <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-wallet"></i><span>Blog</span>
+                            </a>
+                            <ul>
+                                <li><a href="payments.html">Payments</a></li>
+                                <li><a href="payments-add.html">Add Payment</a></li>
+                                <li><a href="payments-invoice.html">Invoice</a></li>
+                            </ul>
+                        </li>
                         <li><a href="javascript:void(0);" class="has-arrow"><i
-                                    class="icon-wallet"></i><span>Payments</span> </a>
+                                    class="icon-wallet"></i><span>Contact</span>
+                            </a>
                             <ul>
                                 <li><a href="payments.html">Payments</a></li>
                                 <li><a href="payments-add.html">Add Payment</a></li>
