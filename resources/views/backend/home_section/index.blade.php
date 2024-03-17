@@ -56,7 +56,14 @@
                                                 <td>{{ $row->linkedin_link }}</td>
                                                 <td>{{ $row->others_link }}</td>
                                                 <td>Active</td>
-                                                <td>Edit/Delete</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-outline-primary"><i
+                                                            class="icon-edit"></i>Edit</button>
+                                                    {{-- <a href="#" class="edit-link">
+                                                        <i class="fal fa-edit"></i> Edit
+                                                    </a> --}}
+                                                    <a href="">Delete</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -151,7 +158,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" id="form_submit_btn">Save changes</button>
+                        <button type="button" class="btn btn-primary" id="form_submit_btn">Save changes</button>
                     </div>
                 </form>
             </div>

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/vendor/bootstrap/css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/vendor/fontawesome-free/css/fontawesome-all.min.css">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> --}}
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css" />
     <link rel="stylesheet"
         href="{{ asset('backend') }}/assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
@@ -67,6 +68,7 @@
 
     <!-- Javascript -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/libscripts.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/vendorscripts.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/datatablescripts.bundle.js"></script>
