@@ -27,6 +27,7 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main.css">
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/color_skins.css">
+
     <style>
         .icon-menu:before {
             display: none !important
@@ -65,6 +66,7 @@
     </div>
 
     <!-- Javascript -->
+    {{-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> --}}
     <script src="{{ asset('backend') }}/assets/bundles/libscripts.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/vendorscripts.bundle.js"></script>
     <script src="{{ asset('backend') }}/assets/bundles/datatablescripts.bundle.js"></script>

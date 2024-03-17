@@ -44,6 +44,20 @@ class HomeSectionController extends Controller
         }
     }
 
+    public function storeByAjax(HomeSectionRequest $request)
+    {
+        $inputData = $request->all();
+        $homeSection = HomeSection::create($inputData);
+        if ($homeSection) {
+            Toastr::success('Created successful!', 'Success');
+            $updatedHomeSections = HomeSection::all();
+            return response()->json($updatedHomeSections);
+        } else {
+            Toastr::error('Something went wrong!', 'Error');
+            return response()->json(['error' => 'Something went wrong'], 500);
+        }
+    }
+
     /**
      * Display the specified resource.
      */

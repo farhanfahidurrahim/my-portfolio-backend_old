@@ -19,18 +19,10 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Add</strong> Home Section</h2>
-                            <ul class="header-dropdown">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
-                                        role="button" aria-haspopup="true" aria-expanded="false"></a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another Action</a></li>
-                                        <li><a href="javascript:void(0);">Something else</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2><strong>Add</strong> Home Section</h2>
+                                <a href="{{ route('home-section.index') }}" class="btn btn-primary" style="float: right">All</a>
+                            </div>
                         </div>
                         <div class="body">
                             <form action="{{ route('home-section.store') }}" method="POST">

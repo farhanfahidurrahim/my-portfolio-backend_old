@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
     * Home Section Routes...
     */
     Route::resource('home-section', HomeSectionController::class);
+    Route::post('hs/store/by-ajax', [HomeSectionController::class, 'storeByAjax'])->name('hs.store.ajax');
 });
 
 require __DIR__ . '/auth.php';
