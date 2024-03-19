@@ -16,7 +16,8 @@ class HomeSectionController extends Controller
     public function index()
     {
         $homeSection = HomeSection::all();
-        return view('backend.home_section.index', compact('homeSection'));
+        // return view('backend.home_section.index', compact('homeSection'));
+        return view('backend.home_section.index_test', compact('homeSection'));
     }
 
     /**

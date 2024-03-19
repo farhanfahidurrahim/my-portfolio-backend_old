@@ -26,6 +26,7 @@ Route::get('/', function () {
 */
 Route::get('/dashboard', function () {
     return view('backend.dashboard');
+    // return view('backend.layouts.master');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
