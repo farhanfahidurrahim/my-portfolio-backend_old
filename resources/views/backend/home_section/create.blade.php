@@ -1,103 +1,82 @@
-@extends('backend.layouts.index')
+@extends('backend.layouts.master')
 @section('content')
-    <div id="main-content">
-        <div class="container-fluid">
-            <div class="block-header">
-                <div class="row">
-                    <div class="col-lg-6 col-md-8 col-sm-12">
-                        <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i
-                                    class="fa fa-arrow-left"></i></a> Add Home Section</h2>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
-                            <li class="breadcrumb-item active">Add Home Section</li>
-                        </ul>
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+                    <div class="mb-1 breadcrumb-right">
+                        <div class="dropdown">
+                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    data-feather="grid"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row clearfix">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="header">
-                            <div style="display: flex; justify-content: space-between;">
-                                <h2><strong>Add</strong> Home Section</h2>
-                                <a href="{{ route('home-section.index') }}" class="btn btn-primary" style="float: right">All</a>
+            <div class="content-body"><!-- Basic Horizontal form layout section start -->
+                <!-- Basic Vertical form layout section start -->
+                <section id="basic-vertical-layouts">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Vertical Form</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form class="form form-vertical">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="first-name-vertical">First Name</label>
+                                                    <input type="text" id="first-name-vertical" class="form-control"
+                                                        name="fname" placeholder="First Name" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="email-id-vertical">Email</label>
+                                                    <input type="email" id="email-id-vertical" class="form-control"
+                                                        name="email-id" placeholder="Email" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="contact-info-vertical">Mobile</label>
+                                                    <input type="number" id="contact-info-vertical" class="form-control"
+                                                        name="contact" placeholder="Mobile" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="password-vertical">Password</label>
+                                                    <input type="password" id="password-vertical" class="form-control"
+                                                        name="contact" placeholder="Password" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-1">
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck3" />
+                                                        <label class="form-check-label" for="customCheck3">Remember
+                                                            me</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="reset" class="btn btn-primary me-1">Submit</button>
+                                                <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        <div class="body">
-                            <form action="{{ route('home-section.store') }}" method="POST">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" name="name" value="{{ old('name') }}"
-                                                placeholder="Enter Full Name"
-                                                class="form-control @error('name') is-invalid @enderror">
-                                            @error('name')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" name="designation" value="{{ old('designation') }}"
-                                                placeholder="Enter Designation"
-                                                class="form-control @error('designation') is-invalid @enderror">
-                                            @error('designation')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" name="resume" value="{{ old('resume') }}"
-                                                placeholder="Enter Resume Name"
-                                                class="form-control @error('resume') is-invalid @enderror">
-                                            @error('resume')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" name="github_link" value="{{ old('github_link') }}"
-                                                placeholder="Enter Github Link"
-                                                class="form-control @error('github_link') is-invalid @enderror">
-                                            @error('github_link')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" name="linkedin_link" value="{{ old('linkedin_link') }}"
-                                                placeholder="Enter LinkedIn Link"
-                                                class="form-control @error('linkedin_link') is-invalid @enderror">
-                                            @error('linkedin_link')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" name="others_link" value="{{ old('others_link') }}"
-                                                placeholder="Enter Others Link"
-                                                class="form-control @error('others_link') is-invalid @enderror">
-                                            @error('others_link')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary btn-lg btn-simple">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>
-                </div>
+                </section>
+                <!-- Basic Vertical form layout section end -->
             </div>
-
         </div>
     </div>
 @endsection

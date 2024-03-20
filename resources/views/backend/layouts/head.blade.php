@@ -19,28 +19,6 @@
 <!-- END: Vendor CSS-->
 
 <!-- BEGIN: DataTable CSS-->
-<link href="https://cdn.datatables.net/v/dt/dt-2.0.2/datatables.min.css" rel="stylesheet">
-<link href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css" rel="stylesheet">
-
-
-
-{{-- <link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
-<link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/tables/datatable/extensions/dataTables.checkboxes.css">
-<link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css"> --}}
-
-{{-- <link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
-<link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
-<link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
-<link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
-<link rel="stylesheet" type="text/css"
-    href="{{ asset('backend') }}/assets/vendors/css/pickers/flatpickr/flatpickr.min.css"> --}}
 <!-- End: DataTable CSS-->
 
 <!-- BEGIN: Theme CSS-->

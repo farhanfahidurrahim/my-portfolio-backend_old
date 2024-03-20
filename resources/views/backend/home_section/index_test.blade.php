@@ -4,6 +4,148 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+                    <div class="mb-1 breadcrumb-right">
+                        <div class="dropdown">
+                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    data-feather="grid"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body"><!-- Basic Tables start -->
+                <div class="row" id="basic-table">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center w-full">
+                                    <h4 class="card-title mb-0">Category</h4>
+                                    <button type="button" class="btn btn-primary">Add Category</button>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#addCategoryModal">
+                                        Add Category Modal
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="addCategoryModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Add</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                </p>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl</th>
+                                            <th>Name</th>
+                                            <th>Designation</th>
+                                            <th>Resume</th>
+                                            <th>Github Link</th>
+                                            <th>Linkedin Link</th>
+                                            <th>Others Link</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($HomeSection as $row)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $row->name }}</td>
+                                                <td>{{ $row->designation }}</td>
+                                                <td>{{ $row->resume }}</td>
+                                                <td>{{ $row->github_link }}</td>
+                                                <td>{{ $row->linkedin_link }}</td>
+                                                <td>{{ $row->others_link }}</td>
+                                                <td><span class="badge rounded-pill badge-light-primary me-1">Active</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button type="button"
+                                                            class="btn btn-sm dropdown-toggle hide-arrow py-0"
+                                                            data-bs-toggle="dropdown">
+                                                            <i data-feather="more-vertical"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">
+                                                                <i data-feather="edit-2" class="me-50"></i>
+                                                                <span>Edit</span>
+                                                            </a>
+                                                            <a class="dropdown-item" href="#">
+                                                                <i data-feather="trash" class="me-50"></i>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Basic Tables end -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{-- <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
             <div class="content-body">
                 <!-- Basic table -->
                 <section id="basic-datatable">
@@ -542,7 +684,7 @@
                 <!--/ Basic table -->
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
 
 <script>
